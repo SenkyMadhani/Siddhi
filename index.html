@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Siddhi ❤️</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe6eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main box */
+.container {
+    text-align: center;
+}
+
+/* Card */
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+img {
+    width: 200px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+.no {
+    background: #ccc;
+    position: absolute;
+}
+
+/* Result */
+#result {
+    display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Question -->
+    <div class="box" id="question">
+        <img src="https://media.tenor.com/3WxG2VePWSUAAAAi/bubududu-panda.gif">
+        <h2>Siddhi, do you Miss me? 💖</h2>
+
+        <button class="yes" id="yesBtn">Yes</button>
+        <button class="no" id="noBtn">No</button>
+    </div>
+
+    <!-- Result -->
+    <div class="box" id="result">
+        <img src="https://media.tenor.com/3WxG2VePWSUAAAAi/bubududu-panda.gif">
+        <h2>I Miss you to Beta</h2>
+        <p style="margin-top:10px; font-size:16px; color:#444;">
+            You make my all days better. <br>
+            I love you, beta ❤️
+        </p>
+    </div>
+
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const question = document.getElementById("question");
+const result = document.getElementById("result");
+
+/* Move NO button */
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+/* YES click */
+yesBtn.addEventListener("click", () => {
+    question.style.display = "none";
+    result.style.display = "block";
+});
+</script>
+
+</body>
+</html>
